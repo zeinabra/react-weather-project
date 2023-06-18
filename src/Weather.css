@@ -23,19 +23,25 @@ border-radius: 4px;
     list-style:none;
     
 }
-.Weather .tempreture {
+.Weather .temperature {
     color: rgb(34, 34, 34);
     font-weight: 400;
     font-size: 64px;
-    line-height: 1;
+    line-height: 64px;
+    margin-left: 5px;
+    font-weight: 400;
+    margin-left: 10px;
 }
 .Weather .unit {
-    position: relative;
-    top: 0px;
-    font-size: 16px;
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
 }
 .Weather .image {
-    margin-right: 10px;
-    height: 64px;
-    width: 64px;
+    margin: 0px auto; 
+    position: relative; 
+    top:-20px;
 }
