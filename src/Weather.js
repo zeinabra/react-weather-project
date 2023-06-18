@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
 import "./Weather.css";
+import FreindlyDate from "./FreindlyDate";
 export default function Weather(props){
     let[city,setCity]=useState(props.defaultCity);
     let[weather,setWeather]=useState({ready:false});
@@ -16,6 +17,7 @@ export default function Weather(props){
                 icon:`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
                 description: response.data.weather[0].description,
                 cityName:response.data.name,
+                date:new Date(response.data.dt*1000),
             })
             
         );
@@ -31,7 +33,7 @@ export default function Weather(props){
         );
     }
     function search(){
-        let key=`a33b693cfbefd271b0ed075f9a8f65f0`
+        let key=`5e7f9aa6e581874c6866724afae9d84f`
         let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`
         axios.get(apiUrl).then(showWeather);
     }
@@ -52,8 +54,8 @@ export default function Weather(props){
             </form>
             <h1 className="mt-3 mb-1">{weather.cityName}</h1>
             <ul>
-                <li>Wednesday 07:00</li>
-                <li>{weather.description}</li>
+                <li><FreindlyDate date={weather.date} /></li>
+                <li className="text-capitalize">{weather.description}</li>
             </ul>
             <div className="row mt-3">
                 <div className="col-6">
