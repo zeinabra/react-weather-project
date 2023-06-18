@@ -17,7 +17,7 @@ if(unit==="celsius"){
         <div className="WeatherTemperature">
         <span className="temperature">{props.celcius}</span>
          <span className="unit">
-         °C |<a href="/" onClick={convertToFahrenhiet}>°F</a>
+         °C |<a href="/" className="text-decoration-none" onClick={convertToFahrenhiet}>°F</a>
          </span>
         </div>
     );
@@ -27,7 +27,7 @@ if(unit==="celsius"){
         <div className="WeatherTemperature">
         <span className="temperature">{fahrenhiet}</span>
          <span className="unit">
-         <a href="/" onClick={convertToCelcius}>°C </a>|°F
+         <a href="/" className="text-decoration-none" onClick={convertToCelcius}>°C </a>|°F
          </span>
         </div>
 
