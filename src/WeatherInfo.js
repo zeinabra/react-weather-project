@@ -7,7 +7,7 @@ export default function WeatherInfo(props){
           <h1 className="mt-3 mb-1">{props.data.cityName}</h1>
             <ul>
                 <li><FreindlyDate date={props.data.date} /></li>
-                <li className="text-capitalize">{data.description}</li>
+                <li className="text-capitalize">{props.data.description}</li>
             </ul>
             <div className="row mt-3">
                 <div className="col-6">
