@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 export default function Weather(props){
     let[city,setCity]=useState(props.defaultCity);
     let[weather,setWeather]=useState({ready:false});
@@ -18,6 +19,8 @@ export default function Weather(props){
                 description: response.data.weather[0].description,
                 cityName:response.data.name,
                 date:new Date(response.data.dt*1000),
+                lat:response.data.coord.lat,
+                lon:response.data.coord.lon,
             })
             
         );
@@ -53,15 +56,7 @@ export default function Weather(props){
 
             </form>
             <WeatherInfo data={weather} />
-            <div className="row">
-                <div className="col">
-                    <ul>
-                        <li>Thu</li>
-                        <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" /></li>
-                        <li><span>37°</span> <span>23°</span></li>
-                    </ul>
-                </div>
-            </div>
+            <WeatherForecast  data={weather}/>
         </div>
     );}else{
         search();
