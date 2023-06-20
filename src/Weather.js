@@ -53,6 +53,15 @@ export default function Weather(props){
 
             </form>
             <WeatherInfo data={weather} />
+            <div className="row">
+                <div className="col">
+                    <ul>
+                        <li>Thu</li>
+                        <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" /></li>
+                        <li><span>37°</span> <span>23°</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );}else{
         search();
