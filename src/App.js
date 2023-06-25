@@ -10,7 +10,7 @@ export default function App() {
       
       <Weather defaultCity="Tehran"/>
       <footer>
-        coded by Zeinab Rasouli {""}<a href="https://github.com/zeinabra/react-weather-project" target="_blank" rel="noreferrer" >open-sourced</a>
+        coded by Zeinab Rasouli {""}<a href="https://github.com/zeinabra/react-weather-project" target="_blank" rel="noopener noreferrer" >open-sourced</a>
       </footer>
      </div>
     </div>
